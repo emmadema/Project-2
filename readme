@@ -1,0 +1,25 @@
+Project 2 Ideas:
+
+-Shopify API
+	-Problem: I spend a lot of time picking an outift each day and for special events.
+	-Goal: I would like to make an app that can intergrate with shopify and weather.com
+		-The app will list out the day of the week and the weather of the day (ideally you can sleste special event days from a calandar and it will pull up the weather for those days)
+		-You will have to upload the clothes you already have and then push them into an API where you can delete or edit those clothes.
+		-You can then go through the days of the week and add an outfit to each day - ideally this will have pictures (maybe allow uploading of your own pics or pull from shopify)
+
+	- Who would need this? 
+		-People who want to plan their outfits
+
+Random Ideas
+	-How to Organize Clothes
+		-color
+		-season
+		-style
+		-type
+		-brand
+	-Fashion Calader
+		-add each outfit based on the day - have a large clanandar grid that shows if you have an outfit selected for that day or if you still need one
+		-when you click on the calandar it shows you what the weather is that day and what you have on each day 
+	-My Closet
+		-add in each item in you closet by manually entering the data and pictures
+		-add in each item using a serach through shopify using shopify Product API
