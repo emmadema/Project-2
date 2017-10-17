@@ -15,7 +15,10 @@
   },
   "dependencies": {
     "body": "^5.1.0",
+    "cd": "^0.3.3",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "parser": "^0.1.4"
+    "parser": "^0.1.4",
+    "shopstyle-sdk": "^1.1.1"
   }
 }
