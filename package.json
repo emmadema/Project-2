@@ -19,6 +19,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "parser": "^0.1.4",
+    "sass": "^1.0.0-beta.2",
     "shopstyle-sdk": "^1.1.1"
   }
 }

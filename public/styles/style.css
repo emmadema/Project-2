@@ -1,3 +1,56 @@
-h1{
-	color: blue;
+.fade-in {
+	opacity: 0;
+	animation: fadeIn ease-in 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
 }
+
+.images{
+	margin: auto;
+	float: right;
+	position: relative;
+}
+
+.header {
+	font-family: 'Didact Gothic', sans-serif;
+	color: #838085;
+	text-align: center;
+}
+
+.app{
+	font-family: 'Didact Gothic', sans-serif;
+	color: #838085;
+	text-align: center;
+}
+
+.signUp{
+	font-family: 'Didact Gothic', sans-serif;
+	color: #838085;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.login{
+	font-family: 'Didact Gothic', sans-serif;
+	color: #838085;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 5px;
+
+}
+
+.appDescription {
+	font-family: 'Didact Gothic', sans-serif;
+	color: #838085;
+	text-align: center;
+}
+
+@keyframes fadeIn { 
+	from { opacity:0; } 
+	to { opacity:1; } 
+}
+
+
+
