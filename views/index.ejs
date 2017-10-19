@@ -1,3 +1,5 @@
+<!--Splash Page-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
 	<title>My Closet</title>
 
 	<!--STYLESHEETS-->
-	<link rel="stylesheet" href="../public/styles/style.css">
+	<link rel="stylesheet" href="../public/styles/onBoardingPage.css">
 	
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
@@ -17,15 +19,15 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
 	<!--APPLICATION SCRIPTS-->
-  	<script src="../public/scripts/view.js"></script>
+  	<script src="../public/scripts/onBoardingPage.js"></script>
 
 
 </head>
 <body>
 <div class ="vertical-center">
-	<div class="container">
-		<div class="images onloadAnimate">
-			<img src="http://image22.oasap.com/o_img/2016/09/13/207054-10097810/women-s-elegant-v-neck-sleeveless-rhinestone-cocktail-dress.jpg" height="300px" width="200px" />
+	<div class="container vertical-center d-felx">
+		<div class="images">
+			<img class="dressOne"src="http://image22.oasap.com/o_img/2016/09/13/207054-10097810/women-s-elegant-v-neck-sleeveless-rhinestone-cocktail-dress.jpg"/>
 		</div>
 		<div class="header fade-in">
 		  <h1>My Closet</h1>
@@ -33,9 +35,9 @@
 		<div class="app fade-in">
 		 	<p>An app that solves the issue: What do I wear today?</p>
 		</div>
-		<div class="btn fade-in">
-		 	<button class="signUp">SignUp</button>
-		 	<button class="login">Login</button>
+		<div class="fade-in justify-content-center buttons">
+			<a type="button" class="btn btn-secondary" id="logIn" href="/login">Login</a>
+		 	<a role="button" class="btn btn-secondary" id="signUp" href="/signup">SignUp</a>
 		</div>
 		<div class="appDescription fade-in">
 			<p>Creates a clanadar and aids in sleceting and outfit each day based on waht is in your closet</p>

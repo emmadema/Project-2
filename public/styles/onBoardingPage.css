@@ -7,15 +7,22 @@
 }
 
 .images{
+
+}
+
+.dressOne{
+	height: 300px;
+	width: 200px;
 	margin: auto;
-	float: right;
-	position: relative;
+	display: block;
+	padding: 10px;
 }
 
 .header {
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
 	text-align: center;
+	margin: 20px;
 }
 
 .app{
@@ -24,20 +31,21 @@
 	text-align: center;
 }
 
-.signUp{
+.buttons{
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
 	text-align: center;
-	margin: 0 auto;
 	border-radius: 5px;
 }
 
-.login{
-	font-family: 'Didact Gothic', sans-serif;
-	color: #838085;
-	text-align: center;
-	margin: 0 auto;
-	border-radius: 5px;
+#signUp{
+
+	padding: 5px 20px 5px 20px;
+}
+
+#logIn{
+
+	padding: 5px 30px 5px 30px;
 
 }
 
@@ -45,6 +53,7 @@
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
 	text-align: center;
+	margin: 50px 20px 20px 20px;
 }
 
 @keyframes fadeIn { 
