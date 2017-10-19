@@ -1,1 +1,85 @@
-<h2>Lets get started! Add Clothing to you closet below:</h2>	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>My Closet</title>
+
+  <!--STYLESHEETS-->
+  <link rel="stylesheet" href="styles/index.css">
+  
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+  <!--VENDOR SCRIPTS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!--APPLICATION SCRIPTS-->
+    <script src="scripts/closetPage.js"></script>
+
+
+</head>
+<body>
+	<div class ="vertical-center">
+	  <div class="container vertical-center d-felx" >
+
+		<h2>Add Clothing to you closet</h2>
+			<div class = "row align-items-start">
+				<div class = "col">
+					<h4>Add Manually</h4>
+				</div>
+				<div class = "col">
+					<h4>Add From ShopStyle</h4>
+				</div>
+
+			</div>
+			<form method="post" action="/signup">
+				<div class = "row">
+					<div class="col">
+						<label for="name">Name of Clothing Item</label>
+					    <input class="form-control" type="text" name="name" id="name">
+					</div>
+					<div class = "col">
+						<label for="search">Search</label>
+						<input class = "form-control" type="text" name="searc" id="searchBar">
+					</div>
+				</div>
+				
+				<div class = "row">
+					<div class="col-6">
+					    <label for="season">Season</label>
+					    <input class="form-control" type="text" name="season" id="season">
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class="col-6">
+					    <label for="brand">Brand</label>
+					    <input class="form-control" type="text" name="brand" id="brand">
+					</div>
+				</div>
+				
+				<div class = "row">
+					<div class="col-6">
+					    <label for="color">Color</label>
+					    <input class="form-control" type"text" name="color" id="color">
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class="col-6">
+					    <label for="img">Image Uploader</label>
+					    <input class="form-control" type="img" name="img" id="img">
+					</div>
+				</div>
+					<input class="btn btn-primary" type="submit">
+			</form>
+	  	</div>
+	</div>
+</body>
+</html>	

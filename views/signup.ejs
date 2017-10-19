@@ -1,11 +1,40 @@
 <!--New User Create Account-->
-<% if (message.length > 0) { %>
-    <div class = "alert alert-danger"> <%= message %> </div>
-	<% } %>
+<!--Login Page For Past User-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>My Closet</title>
+
+  <!--STYLESHEETS-->
+  <link rel="stylesheet" href="styles/index.css">
+  
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+  <!--VENDOR SCRIPTS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!--APPLICATION SCRIPTS-->
+    <script src="scripts/login.js"></script>
+
+
+</head>
+<body>
+<div class ="vertical-center">
+  <div class="container vertical-center d-felx">
+   
 <h2>Signup</h2>
 
 <form method="post" action="/signup">
+   <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name="name" id="name">
+  </div>
   <div class="form-group">
     <label for="email">Email</label>
     <input class="form-control" type="text" name="email" id="email">
@@ -15,6 +44,13 @@
     <label for="email">Password</label>
     <input class="form-control" type="password" name="password" id="password">
   </div>
-
   <input class="btn btn-default" type="submit">
 </form>
+  </div>
+</div>
+</body>
+</html>
+
+<% if (message.length > 0) { %>
+    <div class = "alert alert-danger"> <%= message %> </div>
+  <% } %>

@@ -12,12 +12,15 @@ function getSignup(request, response) {
 function postSignup(request, response, next) {
 	//we already made local signup in passport.js
 	let signupStrategy = passport.authenticate('local-signup',{
-		successRedirect: addClothing(),
+		successRedirect: '/addClothing',
 		failureRedirect: '/signup',
 		failureFlash: true
+
 	});
 
 	return signupStrategy(request,response, next);
+
+	
 }
 
 // GET /login
@@ -30,7 +33,7 @@ function getLogin(request, response) {
 //is that user in here
 function postLogin(request, response, next) {
 	let loginStrategy = passport.authenticate('local-login',{
-		successRedirect: calendarPage(),
+		successRedirect: '/closetPage',
 		failureRedirect: '/login',
 		failureFlash: true
 	});
@@ -45,24 +48,24 @@ function getLogout(request, response) {
 }
 
 
-function calendarPage(request, response){
-		response.redirect('../views/calendarPage');
+
+function getclosetPage(request, response){
+	response.render('closetPage');
 }
 
-
-function addClothing(req, res){
-	response.redirect('/addClothing');
+function getaddClothing(req, res){
+	res.render('addClothing');
 }
 
 
 
 
 module.exports = {
-  getLogin: getLogin,
-  postLogin: postLogin ,
-  getSignup: getSignup,
-  postSignup: postSignup,
-  getLogout: getLogout,
-  calendarPage: calendarPage,
- 	addClothing: addClothing
+	getLogin: getLogin,
+	postLogin: postLogin ,
+	getSignup: getSignup,
+	postSignup: postSignup,
+	getLogout: getLogout,
+	getclosetPage: getclosetPage,
+	getaddClothing: getaddClothing
 };

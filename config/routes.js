@@ -34,10 +34,18 @@ router.route('/login')
 router.route('/logout')
   .get(usersController.getLogout);
 
-router.route('/calendarPage')
-	.get(authenticatedUser, usersController.calendarPage);
-
 router.route('/addClothing')
-  .get(authenticatedUser, usersController.addClothing);
+  .get(authenticatedUser, usersController.getaddClothing);
+
+router.route('/closetPage')
+	.get(authenticatedUser, usersController.getclosetPage);
+
+/*************
+*Routes Pages*
+**************/
+
+//router.post('/addClothing', upload.single('photo'), function(req, res, next){
+
+//});
 
 module.exports = router;

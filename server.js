@@ -7,6 +7,7 @@ var morgan = require('morgan');//generatrs logs on requests automatically
 var cookieParser = require('cookie-parser');//alows you to add a secret string
 var bodyParser = require("body-parser");
 var session = require('express-session');
+//var upload = multer({ dest: 'uploads/'});
 
 mongoose.connect('mongodb://localhost/myCloset'); 
 
@@ -19,6 +20,7 @@ app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
+
 
 app.use(session({ secret: 'link other pages here' })); 
 //inialize passport
