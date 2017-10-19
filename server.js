@@ -7,7 +7,8 @@ var morgan = require('morgan');//generatrs logs on requests automatically
 var cookieParser = require('cookie-parser');//alows you to add a secret string
 var bodyParser = require("body-parser");
 var session = require('express-session');
-//var upload = multer({ dest: 'uploads/'});
+var multer = require('multer');//allows image files to be up[loaded to the datbase
+var shopStyle = require('shopstyle-sdk');
 
 mongoose.connect('mongodb://localhost/myCloset'); 
 

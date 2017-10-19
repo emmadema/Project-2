@@ -1,14 +1,13 @@
 /********************
  * ROUTES  Passport*
  ********************/
-
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var passport = require("passport");
-var usersController = require('../controllers/users');
-var staticsController = require('../controllers/statics');
+const express = require('express');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const passport = require("passport");
+const usersController = require('../controllers/users');
+const staticsController = require('../controllers/statics');
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
@@ -40,12 +39,9 @@ router.route('/addClothing')
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
 
-/*************
-*Routes Pages*
-**************/
 
-//router.post('/addClothing', upload.single('photo'), function(req, res, next){
+//router.route('/api/:keyword')
 
-//});
+
 
 module.exports = router;
