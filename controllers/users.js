@@ -47,12 +47,12 @@ function getLogout(request, response) {
 	response.redirect('/');
 }
 
-
-
+//secret page
 function getclosetPage(request, response){
 	response.render('closetPage');
 }
 
+//secreat page
 function getaddClothing(req, res){
 	res.render('addClothing');
 }
