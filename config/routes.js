@@ -32,7 +32,7 @@ router.route('/logout')
   .get(usersController.getLogout);
 
 router.route('/addClothing')
-  .get(authenticatedUser, usersController.getaddClothing);
+  .get(authenticatedUser, usersController.getaddClothing, apiController.getSearch);
 
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
@@ -41,9 +41,6 @@ router.route('/closetPage')
     *ROUTES*
 ***************/
 //pulling from the search bar to search the api URL
-
-router.route('/addClothing')
-  .get(authenticatedUser, apiController.getSearch);
 
 //export all the routes
 module.exports = router;

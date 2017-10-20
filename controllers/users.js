@@ -55,6 +55,8 @@ function getclosetPage(request, response){
 //secreat page
 function getaddClothing(req, res){
 	res.render('addClothing');
+	console.log(req.result);
+	//if req. query the got to api
 }
 
 
