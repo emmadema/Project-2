@@ -10,7 +10,7 @@ var session = require('express-session');
 var multer = require('multer');//allows image files to be up[loaded to the datbase
 //var shopStyle = require('shopstyle-sdk');
 
-mongoose.connect('mongodb://localhost/myCloset'); 
+ mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -43,4 +43,4 @@ app.use(function(req, res, next) {
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
