@@ -8,7 +8,7 @@ const methodOverride = require('method-override');
 const passport = require("passport");
 const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
-const apiController = require('../controllers/api')
+const apiController = require('../controllers/api');
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution

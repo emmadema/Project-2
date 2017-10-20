@@ -21,8 +21,10 @@ function getSearch(req, res, next){
 	console.log(keyword);
 		if (keyword) {
 			let apiUrl = ('http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key);
+			console.log(apiUrl);
 			request(apiURL, function(err, response, data, next) {//check this
-				response.send(data);
+				response.json(data);
+				console.log(data);
 				next();
 			});
 		} else {
