@@ -39,13 +39,10 @@ router.route('/closetPage')
 /**************
     *ROUTES*
 ***************/
-//router.route('/api/:keyword')
-router.route('')
-  .get();
+//pulling from the search bar to search the api URL
 
 router.route('')
-  .get();
-
+  .get(authenticatedUser, apiController.getaddClothing);
 
 //export all the routes
 module.exports = router;

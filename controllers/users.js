@@ -58,8 +58,6 @@ function getaddClothing(req, res){
 }
 
 
-
-
 module.exports = {
 	getLogin: getLogin,
 	postLogin: postLogin ,
