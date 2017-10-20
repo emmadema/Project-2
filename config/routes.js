@@ -12,12 +12,9 @@ const staticsController = require('../controllers/statics');
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
     if (req.isAuthenticated()) return next();
-
-
     // Otherwise the request is always redirected to the home page
     res.redirect('/');
 }
-
 
 router.route('/')
   .get(staticsController.home);
@@ -39,9 +36,16 @@ router.route('/addClothing')
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
 
-
+/**************
+    *ROUTES*
+***************/
 //router.route('/api/:keyword')
+router.route('')
+  .get();
+
+router.route('')
+  .get();
 
 
-
+//export all the routes
 module.exports = router;

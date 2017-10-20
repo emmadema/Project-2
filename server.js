@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');//alows you to add a secret string
 var bodyParser = require("body-parser");
 var session = require('express-session');
 var multer = require('multer');//allows image files to be up[loaded to the datbase
-var shopStyle = require('shopstyle-sdk');
+//var shopStyle = require('shopstyle-sdk');
 
 mongoose.connect('mongodb://localhost/myCloset'); 
 

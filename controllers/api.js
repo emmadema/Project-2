@@ -17,14 +17,13 @@ const apiURL = ('http://api.shopstyle.com/api/v2/products?fts=' + req.params.key
 
 //send data to page when akeyword is searched
 app.get('/api/:keyword', function getSearch(req, res) {
-    var searchKeyword = 'dress';
+    var searchKeyword;
     request(apiURL, function(err, res, body) {
   	searchKeyword = json.parse(body);
   	res.send(searchKeyword);
   	console.log(apiURL);
   	});
 });
-
 
 module.exports = {
 	getSearch: getSearch
