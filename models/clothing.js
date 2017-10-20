@@ -12,4 +12,4 @@ var ClothingSchema = new Schema ({
 
 var Clothing = mongoose.model('Clothing', ClothingSchema);
 module.exports = Clothing;
-
+//test
