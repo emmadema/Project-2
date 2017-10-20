@@ -17,15 +17,18 @@ const request = require('request');
 //send data to page when akeyword is searched
 
 function getSearch(req, res, next){
-	let keyword  = req.searc;
+	let keyword  = req.query.searc;
+	console.log("getSearch ran");
 	console.log(keyword);
 		if (keyword) {
-			let apiUrl = ('http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key);
+			let apiUrl = 'http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key;
 			console.log(apiUrl);
-			request(apiURL, function(err, response, data, next) {//check this
-				response.json(data);
+			request (apiUrl, function(err, response, data) {//check this
+				//res.send(data);
+				req.searchResults = data;
 				console.log(data);
 				next();
+				//send data to a var inside req
 			});
 		} else {
 		next();

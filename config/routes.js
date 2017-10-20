@@ -32,7 +32,7 @@ router.route('/logout')
   .get(usersController.getLogout);
 
 router.route('/addClothing')
-  .get(authenticatedUser, usersController.getaddClothing, apiController.getSearch);
+  .get(authenticatedUser, apiController.getSearch, usersController.getaddClothing);
 
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
