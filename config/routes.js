@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const passport = require("passport");
 const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
+const apiController = require('../controllers/api')
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
@@ -41,8 +42,8 @@ router.route('/closetPage')
 ***************/
 //pulling from the search bar to search the api URL
 
-router.route('')
-  .get(authenticatedUser, apiController.getaddClothing);
+router.route('/addClothing')
+  .get(authenticatedUser, apiController.getSearch);
 
 //export all the routes
 module.exports = router;

@@ -38,9 +38,10 @@
 				</div>
 
 			</div>
+			<!--Add Clothing Form--> 
 			<form method="post" action="/signup">
 				<div class = "row">
-					<div class="col">
+					<div class="col-6">
 						<label for="name">Name of Clothing Item</label>
 					    <input class="form-control" type="text" name="name" id="name">
 					</div>
@@ -50,10 +51,6 @@
 					<div class="col-6">
 					    <label for="season">Season</label>
 					    <input class="form-control" type="text" name="season" id="season">
-					</div>
-					<div class ="col-6">
-						<input class="btn btn-primary" type="submit">
-						<!--when button is pressed make call to api axious -->
 					</div>
 				</div>
 
@@ -77,11 +74,15 @@
 					    <input class="form-control" type="img" name="img" id="img">
 					</div>
 				</div>
+				<div class ="col-6">
+					<input class="btn btn-primary" type="submit">
+				</div>
 					
 			</form>
+			<!--Search API Form-->
 			<form>
 				<div class = "row">
-					<div class = "col">
+					<div class = "col-6">
 						<label for="search">Search</label>
 						<input class = "form-control" type="text" name="searc" id="searchBar">
 					</div>
