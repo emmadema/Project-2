@@ -9,6 +9,7 @@ const passport = require("passport");
 const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
 const apiController = require('../controllers/api');
+const formController = require('../controllers/form');
 
 function authenticatedUser(req, res, next) {
     // If the user is authenticated, then we continue the execution
@@ -32,15 +33,12 @@ router.route('/logout')
   .get(usersController.getLogout);
 
 router.route('/addClothing')
-  .get(authenticatedUser, apiController.getSearch, usersController.getaddClothing);
+  .get(authenticatedUser, formController.getAll, formController.getOne, apiController.getSearch, usersController.getaddClothing)
+  .post(formController.createOne)
+  .delete(formController.deleteOne);
 
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
-
-/**************
-    *ROUTES*
-***************/
-//pulling from the search bar to search the api URL
 
 //export all the routes
 module.exports = router;

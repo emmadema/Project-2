@@ -14,7 +14,8 @@ var multer = require('multer');//allows image files to be up[loaded to the datba
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
-app.use(bodyParser()); 
+app.use(bodyParser.urlencoded({ extended: true }));
+ 
 
 app.set('views', './views');
 app.engine('ejs', require('ejs').renderFile);

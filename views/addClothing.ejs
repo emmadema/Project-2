@@ -25,60 +25,34 @@
 
 </head>
 <body>
-	<div class ="vertical-center">
-	  <div class="container vertical-center d-felx" >
-
-		<h2>Add Clothing to you closet</h2>
-			<div class = "row align-items-start">
-				<div class = "col">
-					<h4>Add Manually</h4>
-				</div>
-				<div class = "col">
-					<h4>Add From ShopStyle</h4>
-				</div>
-
-			</div>
-			<!--Add Clothing Form--> 
-			<form method="post" action="/signup">
-				<div class = "row">
-					<div class="col-6">
-						<label for="name">Name of Clothing Item</label>
-					    <input class="form-control" type="text" name="name" id="name">
-					</div>
-				</div>
-				
-				<div class = "row">
-					<div class="col-6">
-					    <label for="season">Season</label>
-					    <input class="form-control" type="text" name="season" id="season">
-					</div>
-				</div>
-
-				<div class = "row">
-					<div class="col-6">
-					    <label for="brand">Brand</label>
-					    <input class="form-control" type="text" name="brand" id="brand">
-					</div>
-				</div>
-				
-				<div class = "row">
-					<div class="col-6">
-					    <label for="color">Color</label>
-					    <input class="form-control" type"text" name="color" id="color">
-					</div>
-				</div>
-
-				<div class = "row">
-					<div class="col-6">
-					    <label for="img">Image Uploader</label>
-					    <input class="form-control" type="img" name="img" id="img">
-					</div>
-				</div>
-				<div class ="col-6">
-					<input class="btn btn-primary" type="submit">
-				</div>
-					
-			</form>
+	<div class="container vertical-center">
+    <h1 class="text-center">Add Clothing</h1>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form class="form-inline" id="newClothing">
+          <div class="form-group">
+            <label for="title">Type of Clothing</label>
+            <input type="text" class="form-control" name="typeOf" placeholder="Shirt, Pants... ect.">
+          </div>
+          <div class="form-group">
+            <label for="title">Season</label>
+            <input type="text" class="form-control" name="season" placeholder="Season">
+          </div>
+          <div class="form-group">
+            <label for="title">Color</label>
+            <input type="text" class="form-control" name="color" placeholder="Color">
+          </div>
+          <div class="form-group">
+            <label for="title">Brand</label>
+            <input type="text" class="form-control" name="brand" placeholder="Brand">
+          </div>
+          <button type="submit" class="btn btn-default">Add Clothing</button>
+        </form>
+        <div id='clothingTarget'>
+        </div>
+      </div>
+    </div>
+  </div>
 			<!--Search API Form-->
 			<form method="GET">
 				<div class = "row">
