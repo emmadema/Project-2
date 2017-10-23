@@ -12,17 +12,13 @@ const db = require('../models');
 *Form Controllers*
 ****************/
 
-function getForm (req, res) {
-  res.render();
-};
-
-function getAll (req, res) {
+function getAll (req, res,next) {
   db.Clothing.find({}, function(err, clothing) {
       if (err) { return console.log("index error: " + err); }
       res.json(clothing);
+      next ();
   });
 }
-
 
 function getOne (req, res) {
   db.Clothing.findOne({_id: req.params.id }, function(err, clothing) {
@@ -56,7 +52,6 @@ function deleteOne (req, res) {
 
 //export all controllers to be used in the routes
 module.exports = {
-  getForm: getForm,
 	getAll: getAll,
 	getOne: getOne,
 	createOne: createOne,

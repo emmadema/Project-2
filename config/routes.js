@@ -39,6 +39,7 @@ router.route('/addClothing')
 
 router.route('/closetPage')
 	.get(authenticatedUser, usersController.getclosetPage);
+ 
 
 //export all the routes
 module.exports = router;
