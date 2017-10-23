@@ -1,25 +1,27 @@
- var db = require('./models/clothing');
+//const mongoose = require("mongoose");
+const db = require('./models');
+
+
 
  var clothingList = {
- 	nameOf: "Jean Jacket",
+ 	typeOf: "Jean Jacket",
 	season: "All",
 	brand: "Gap",
-	color: "Dark Blue",
-	image: []
+	color: "Dark Blue"
  };
 
 db.Clothing.remove({}, function(err, clothing) {
    console.log('removed clothing');
-  db.Clothing.create(clothing_list, function(err, clothing) {
+  db.Clothing.create(clothingList, function(err, clothing) {
   		if (err) {
   			return console.log('error', err);	
   		} 
-  		console.log("all clothes", clothes);
-  		console.log("created", clothing.lenght, "clothing items");
+  		console.log("all clothes", clothing);
+  		console.log("created", clothingList.length, "clothing items");
   		process.exit();
 	});
 });
 
-ejs.renderFile('./views/addClothing.ejs', clothing, function(err, str){html = str;});
+//ejs.renderFile('./views/addClothing.ejs', clothing, function(err, str){html = str;});
 
 

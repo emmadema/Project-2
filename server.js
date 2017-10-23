@@ -10,6 +10,7 @@ const session = require('express-session');
 const multer = require('multer');//allows image files to be up[loaded to the datbase
 const db = require('./models');
 const ejs = require('ejs');
+const expressValidator = require('express-validator');
 //var shopStyle = require('shopstyle-sdk');
 
 mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
@@ -17,6 +18,8 @@ mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
 app.use(morgan('dev')); 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(expressValidator());
  
 
 app.set('views', './views');

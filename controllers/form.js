@@ -12,8 +12,11 @@ const db = require('../models');
 *Form Controllers*
 ****************/
 
+function getForm (req, res) {
+  res.render();
+};
+
 function getAll (req, res) {
-  // send all books as JSON response
   db.Clothing.find({}, function(err, clothing) {
       if (err) { return console.log("index error: " + err); }
       res.json(clothing);
@@ -40,10 +43,8 @@ function createOne (req, res) {
 }
 
 function deleteOne (req, res) {
-  // get book id from url params (`req.params`)
   console.log('clothing deleted', req.params);
   var clothingId = req.params.id;
-  // find the index of the book we want to remove
   db.Clothing.findOneAndRemove({ _id: clothingId }, function (err, deletedClothing) {
     res.json(deletedClothing);
   });
@@ -51,10 +52,11 @@ function deleteOne (req, res) {
 
 //function updateOne (req, res){
 
-//x}
+//}
 
 //export all controllers to be used in the routes
 module.exports = {
+  getForm: getForm,
 	getAll: getAll,
 	getOne: getOne,
 	createOne: createOne,
