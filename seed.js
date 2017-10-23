@@ -1,4 +1,12 @@
- var db = require('./models');
+ var db = require('./models/clothing');
+
+ var clothing_list = {
+ 	nameOf: "Jean Jacket",
+	season: "All",
+	brand: "Gap",
+	color: "Dark Blue",
+	image: []
+ };
 
 // db.Clothing.remove({}, function(err, clothing) {
 //   console.log('removed clothing');
