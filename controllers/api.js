@@ -23,11 +23,11 @@ function getSearch(req, res, next){
 		if (keyword) {
 			let apiUrl = 'http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key;
 			console.log(apiUrl);
-			request (apiUrl, function(err, response, data) {//check this
+			request (apiUrl, function(err, response, body) {//check this
 				//res.send(data);
-				req.searchResults = data;
-				console.log(data);
-				console.log(typeof data);
+				req.searchResults = body;
+				req.apiData = JSON.parse(body).products[0].name;
+				console.log(req.apiData);
 				next();
 				//send data to a var inside req
 				//Json parse it

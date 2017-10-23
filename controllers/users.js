@@ -60,7 +60,7 @@ function getclosetPage(request, response){
 
 //secreat page
 function getaddClothing(req, res){
-	res.render('addClothing', {searchResults: req.searchResults});
+	res.render('addClothing', {apiData: req.apiData});
 	console.log(req.result);
 	//if req. query the got to api
 }
