@@ -42,10 +42,10 @@ function createOne (req, res) {
 function deleteOne (req, res) {
   // get book id from url params (`req.params`)
   console.log('clothing delete', req.params);
-  var bookId = req.params.id;
+  var clothingId = req.params.id;
   // find the index of the book we want to remove
-  db.Book.findOneAndRemove({ _id: bookId }, function (err, deletedBook) {
-    res.json(deletedBook);
+  db.Clothing.findOneAndRemove({ _id: clothingId }, function (err, deletedClothing) {
+    res.json(deletedClothing);
   });
 }
 
