@@ -7,7 +7,6 @@ const staticsController = require('../controllers/statics');
 const key = require('../info');
 const request = require('request');
 const mongoose = require('mongoose');
-
 const db = require('../models');
 /****************
 *Form Controllers*
@@ -42,7 +41,7 @@ function createOne (req, res) {
 
 function deleteOne (req, res) {
   // get book id from url params (`req.params`)
-  console.log('clothing delete', req.params);
+  console.log('clothing deleted', req.params);
   var clothingId = req.params.id;
   // find the index of the book we want to remove
   db.Clothing.findOneAndRemove({ _id: clothingId }, function (err, deletedClothing) {
@@ -50,9 +49,9 @@ function deleteOne (req, res) {
   });
 }
 
-function updateOne (req, res){
+//function updateOne (req, res){
 
-}
+//x}
 
 //export all controllers to be used in the routes
 module.exports = {

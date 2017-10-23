@@ -1,17 +1,17 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var passport = require('passport');
-var flash = require('connect-flash');//stores messages
-var morgan = require('morgan');//generatrs logs on requests automatically
-var cookieParser = require('cookie-parser');//alows you to add a secret string
-var bodyParser = require("body-parser");
-var session = require('express-session');
-var multer = require('multer');//allows image files to be up[loaded to the datbase
-var db = require('./models');
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('connect-flash');//stores messages
+const morgan = require('morgan');//generatrs logs on requests automatically
+const cookieParser = require('cookie-parser');//alows you to add a secret string
+const bodyParser = require("body-parser");
+const session = require('express-session');
+const multer = require('multer');//allows image files to be up[loaded to the datbase
+const db = require('./models');
 //var shopStyle = require('shopstyle-sdk');
 
- mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
+mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
 
 app.use(morgan('dev')); 
 app.use(cookieParser());

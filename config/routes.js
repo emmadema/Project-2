@@ -33,7 +33,7 @@ router.route('/logout')
   .get(usersController.getLogout);
 
 router.route('/addClothing')
-  .get(authenticatedUser, formController.getAll, formController.getOne, apiController.getSearch, usersController.getaddClothing)
+  .get(authenticatedUser, apiController.getSearch, usersController.getaddClothing, formController.getAll, formController.getOne)
   .post(formController.createOne)
   .delete(formController.deleteOne);
 

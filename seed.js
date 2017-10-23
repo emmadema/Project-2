@@ -15,7 +15,7 @@ db.Clothing.remove({}, function(err, clothing) {
   			return console.log('error', err);	
   		} 
   		console.log("all clothes", clothes);
-  		console.log("created", colthing.lenght, "clothing items");
+  		console.log("created", clothing.lenght, "clothing items");
   		process.exit();
 	});
 });

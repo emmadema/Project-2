@@ -1,17 +1,8 @@
 console.log("JS is working");
 
-/* CLIENT-SIDE JS
- *
- * You may edit this file as you see fit.  Try to separate different components
- * into functions and objects as needed.
- *
- */
-
-
-
 $(document).ready(function() {
     console.log('app.js loaded!');
-    $.get('/addClothing.ejs').success(function (clothing) {
+    /*$.get('/addClothing').success(function (clothing) {
      	clothing.forEach(function(clothing) {
         renderClohting(clothing);
       });
@@ -22,13 +13,13 @@ $(document).ready(function() {
       e.preventDefault();
       var formData = $(this).serialize();
       console.log('formData', formData);
-      $.post('/addClothing.ejs', formData, function(clothing) {
+      $.post('/addClothing', formData, function(clothing) {
         console.log('clothing after POST', clothing);
         renderAlbum(album);  //render the server's response
       });
         $(this).trigger("reset");
-    });
-
+    });*/
+});
   function renderClothing(clothing) {
     console.log('rendering clothing: ', clothing);
 
@@ -74,4 +65,3 @@ $(document).ready(function() {
 
     $('#clothing').prepend(clothingHtml);
   }
-});
