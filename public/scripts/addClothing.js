@@ -11,19 +11,19 @@ console.log("JS is working");
 
 $(document).ready(function() {
   console.log('app.js loaded!');
-  $.get('/addClothing').success(function (clothing) {
+  $.get('/myCloset').success(function (clothing) {
    	clothing.forEach(function(clothing) {
       renderClohting(clothing);
     });
   });
 
 
-  $('#album-form form').on('submit', function(e) {
+  $('#clothing-form form').on('submit', function(e) {
     e.preventDefault();
     var formData = $(this).serialize();
     console.log('formData', formData);
-    $.post('/api/albums', formData, function(album) {
-      console.log('album after POST', album);
+    $.post('/addClothing', formData, function(clothing) {
+      console.log('clothing after POST', clothing);
       renderAlbum(album);  //render the server's response
     });
     $(this).trigger("reset");
@@ -32,53 +32,48 @@ $(document).ready(function() {
 });
 
 
-// this function takes a single album and renders it to the page
-function renderAlbum(album) {
-  console.log('rendering album:', album);
+function renderClothing(clothing) {
+  console.log('rendering clothing: ', clothing);
 
-  var albumHtml =
-  "        <!-- one album -->" +
-  "        <div class='row album' data-album-id='" + album._id + "'>" +
+  var clothingHtml =
+  "        <!-- one clothing -->" +
+  "        <div class='row clothing' data-clothing-id='" + clothing._id + "'>" +
   "          <div class='col-md-10 col-md-offset-1'>" +
   "            <div class='panel panel-default'>" +
   "              <div class='panel-body'>" +
-  "              <!-- begin album internal row -->" +
+  "              <!-- begin clothing internal row -->" +
   "                <div class='row'>" +
-  "                  <div class='col-md-3 col-xs-12 thumbnail album-art'>" +
-  "                     <img src='" + "http://placehold.it/400x400'" +  " alt='album image'>" +
+  "                  <div class='col-md-3 col-xs-12 thumbnail clothing-art'>" +
+  "                     <img src='" + "http://placehold.it/400x400'" +  " alt='clothing image'>" +
   "                  </div>" +
   "                  <div class='col-md-9 col-xs-12'>" +
   "                    <ul class='list-group'>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Album Name:</h4>" +
-  "                        <span class='album-name'>" + album.name + "</span>" +
+  "                        <h4 class='inline-header'>Name:</h4>" +
+  "                        <span class='clothing-name'>" + clothing.typeOf + "</span>" +
   "                      </li>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Artist Name:</h4>" +
-  "                        <span class='artist-name'>" + album.artistName + "</span>" +
+  "                        <h4 class='inline-header'>Season:</h4>" +
+  "                        <span class='artist-name'>" + clothing.season+ "</span>" +
   "                      </li>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Released date:</h4>" +
-  "                        <span class='album-name'>" + album.releaseDate + "</span>" +
+  "                        <h4 class='inline-header'>Color: </h4>" +
+  "                        <span class='clothing-name'>" + clothing.color+ "</span>" +
   "                      </li>" +
-
-  buildSongsHtml(album.songs) +
-
-
   "                    </ul>" +
   "                  </div>" +
   "                </div>" +
-  "                <!-- end of album internal row -->" +
+  "                <!-- end of clothing internal row -->" +
 
   "              </div>" + // end of panel-body
 
   "              <div class='panel-footer'>" +
-  "                <button class='btn btn-primary add-song'>Add Song</button>" +
+  "                <button class='btn btn-primary add-clothing'>Add Clothing Item</button>" +
   "              </div>" +
 
   "            </div>" +
   "          </div>" +
-  "          <!-- end one album -->";
+  "          <!-- end one item-->";
 
-  $('#albums').prepend(albumHtml);
+  $('#clothing').prepend(clothingHtml);
  }

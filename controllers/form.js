@@ -6,15 +6,16 @@ const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
 const key = require('../info');
 const request = require('request');
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
+const db = require('../models');
 /****************
 *Form Controllers*
 ****************/
 
 function getAll (req, res) {
   // send all books as JSON response
-  db.Clothing.find()({}, function(err, clothing) {
+  db.Clothing.find({}, function(err, clothing) {
       if (err) { return console.log("index error: " + err); }
       res.json(clothing);
   });
