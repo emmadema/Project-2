@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var ClothingSchema = new Schema ({
-	nameOf: String,
+	typeOf: String,
 	season: String,
 	brand: String,
 	color: String,

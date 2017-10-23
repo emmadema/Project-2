@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 const session = require('express-session');
 const multer = require('multer');//allows image files to be up[loaded to the datbase
 const db = require('./models');
+const ejs = require('ejs');
 //var shopStyle = require('shopstyle-sdk');
 
 mongoose.connect( process.env.MONGODB_URI || 'mongodb://localhost/myCloset');
@@ -23,7 +24,6 @@ app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
-
 
 app.use(session({ secret: 'link other pages here' })); 
 //inialize passport

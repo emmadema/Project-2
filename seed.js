@@ -20,6 +20,6 @@ db.Clothing.remove({}, function(err, clothing) {
 	});
 });
 
-
+ejs.renderFile('./views/addClothing.ejs', clothing, function(err, str){html = str;});
 
 

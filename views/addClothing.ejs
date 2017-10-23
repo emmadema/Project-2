@@ -13,6 +13,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <script src="/scripts/addClothing.js"></script>
@@ -25,9 +26,10 @@
           <p>Add clothing to your closet to get started</p>
         </div>
       <h1 class="text-center">Add Clothing</h1>
+
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form method="POST" class="form-inline" id="newClothing">
+          <form method="POST" class="form-inline" id="newClothingForm">
             <div class="form-group">
               <label for="title">Type of Clothing</label>
               <input type="text" class="form-control" name="typeOf" placeholder="Shirt, Pants... ect.">
@@ -50,7 +52,15 @@
           </div>
         </div>
       </div>
-   
+      <div>
+        
+        <h1><%= typeOf %></h1>
+        <ul>
+          <li><%= season %></li>
+          <li><%= color %></li>
+          <li><%= brand %></li>
+        </ul>
+      </div>
   			<!--Search API Form-->
   			<form method="GET">
   				<div class = "row">
