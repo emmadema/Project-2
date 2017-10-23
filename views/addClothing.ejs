@@ -29,37 +29,42 @@
 
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-       
-
-    <form method="GET">
-          <div class = "row">
-            <div class = "col-6">
-              <label for="search">Search</label>
-              <input class = "form-control" type="text" name="searc" id="searchBar">
+          <form method="post" class="form-inline" id="newClothingForm" action="/addClothing">
+            <div class="form-group">
+              <label for="title">Type of Clothing</label>
+              <input type="text" class="form-control" name="typeOf" placeholder="Shirt, Pants... ect.">
             </div>
-          </div>
-          <div>
-            <input class="btn btn-primary" id ="search" type="submit" text="Search">
-          </div>
-        </form>
-      
+            <div class="form-group">
+              <label for="title">Season</label>
+              <input type="text" class="form-control" name="season" placeholder="Season">
+            </div>
+            <div class="form-group">
+              <label for="title">Color</label>
+              <input type="text" class="form-control" name="color" placeholder="Color">
+            </div>
+            <div class="form-group">
+              <label for="title">Brand</label>
+              <input type="text" class="form-control" name="brand" placeholder="Brand">
+            </div>
+            <input type="submit" class="btn btn-default" value="Add Clothing Item">
+          </form>
+        </div>
+      </div>
+          <form method="GET">
+            <div class = "row">
+              <div class = "col-6">
+                <label for="search">Search</label>
+                <input class = "form-control" type="text" name="searc" id="searchBar">
+              </div>
+            </div>
+            <div>
+              <input class="btn btn-primary" id ="search" type="submit" text="Search">
+            </div>
+          </form>
         <div>
           <%= searchResults %>
-        </div>
-      
-        </div>
-       <script>
-        <form action="<%= action %>" method="post">
-        <% if (clothing.length) { %>
-            <% clothing.forEach(function(clothing){ %>
-                <label><%= clothing.name %></label>
-                <input type="<%= clothing.type %>" name="<%= clothing.name %>" <% if (clothing.property) { %> <%= clothing.property %> <% } %> >
-            <% }) %>
-        <% } %>
-        <button type="submit"><%= title %></button> 
-        </form>
-    </script>
-  		
+      </div>
+    </div>
   </body>
 </html>	
 
