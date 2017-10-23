@@ -27,8 +27,12 @@ function getSearch(req, res, next){
 				//res.send(data);
 				req.searchResults = data;
 				console.log(data);
+				console.log(typeof data);
 				next();
 				//send data to a var inside req
+				//Json parse it
+				//movie requests
+				//google request lab
 			});
 		} else {
 		next();

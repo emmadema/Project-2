@@ -8,17 +8,12 @@ const key = require('../info');
 const request = require('request');
 const mongoose = require('mongoose');
 const db = require('../models');
+
 /****************
 *Form Controllers*
 ****************/
 
-function getAll (req, res,next) {
-  db.Clothing.find({}, function(err, clothing) {
-      if (err) { return console.log("index error: " + err); }
-      res.json(clothing);
-      next ();
-  });
-}
+
 
 function getOne (req, res) {
   db.Clothing.findOne({_id: req.params.id }, function(err, clothing) {
@@ -34,7 +29,7 @@ function createOne (req, res) {
     color: req.body.color
 	});
   	db.Clothing.create(req.body, function(err, clothing){
-      res.json(clothing);
+      res.redirect('/closetPage');
   	});
 }
 
@@ -52,7 +47,7 @@ function deleteOne (req, res) {
 
 //export all controllers to be used in the routes
 module.exports = {
-	getAll: getAll,
+
 	getOne: getOne,
 	createOne: createOne,
 	deleteOne: deleteOne

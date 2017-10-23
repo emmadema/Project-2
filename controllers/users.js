@@ -1,5 +1,8 @@
 var passport = require("passport");
 
+const db = require('../models');
+
+
 // GET /signup
 //new user
 function getSignup(request, response) {
@@ -49,7 +52,10 @@ function getLogout(request, response) {
 
 //secret page
 function getclosetPage(request, response){
-	response.render('closetPage');
+  	db.Clothing.find({}, function(err, clothing) {
+      if (err) { return console.log("index error: " + err); }
+      response.render('closetPage', {clothing: clothing});
+  });
 }
 
 //secreat page
