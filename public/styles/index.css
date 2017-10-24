@@ -1,3 +1,4 @@
+/*creates a fade nin animation for the words on the home page*/
 .fade-in {
 	opacity: 0;
 	animation: fadeIn ease-in 1;
@@ -6,10 +7,7 @@
 	animation-delay: 0.5s;
 }
 
-.images{
-
-}
-
+/*sets the style for the dress image on the home page*/
 .dressOne{
 	height: 300px;
 	width: 200px;
@@ -17,6 +15,7 @@
 	display: block;
 	padding: 10px;
 }
+
 
 .header {
 	font-family: 'Didact Gothic', sans-serif;
@@ -39,14 +38,11 @@
 }
 
 #signUp{
-
 	padding: 5px 20px 5px 20px;
 }
 
 #logIn{
-
 	padding: 5px 30px 5px 30px;
-
 }
 
 .appDescription {
@@ -56,6 +52,7 @@
 	margin: 50px 20px 20px 20px;
 }
 
+/*allows the animation to function*/
 @keyframes fadeIn { 
 	from { opacity:0; } 
 	to { opacity:1; } 
