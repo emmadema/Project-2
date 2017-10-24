@@ -39,8 +39,13 @@ Both tests are for the API to ensure is is getting the correct data. These use m
 [Deploy on Heroku](https://thawing-caverns-98263.herokuapp.com)
 
 ## Built With
+
 [NODE JS](https://nodejs.org/en/)
+
+
 [J Query](https://jquery.com/)
+
+
 [Java Script](https://www.javascript.com/)
 
 ## Versioning
