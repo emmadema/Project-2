@@ -32,8 +32,8 @@ function getLogin(request, response) {
 // POST /login 
 function postLogin(request, response, next) {
 	let loginStrategy = passport.authenticate('local-login',{
-		successRedirect: '/closetPage',
-		failureRedirect: '/login',
+		successRedirect: '/closetPage',//if the username and password match redirtect to the closet page
+		failureRedirect: '/login', //if the username and password dont match redirect home
 		failureFlash: true
 	});
 	return loginStrategy(request, response, next);
@@ -41,25 +41,25 @@ function postLogin(request, response, next) {
 
 // GET /logout
 function getLogout(request, response) {
-	request.logout();
-	response.redirect('/');
+	request.logout(); //logout
+	response.redirect('/'); //redirect to the home page
 }
 
 //secret page
 function getclosetPage(request, response){
-  	db.Clothing.find({}, function(err, clothing) {
+  	db.Clothing.find({}, function(err, clothing) { //find all the clohting
       if (err) { return console.log("index error: " + err); }
-      response.render('closetPage', {clothing: clothing});
+      response.render('closetPage', {clothing: clothing}); //render all the clothing on the screen
   });
 }
 
 //secreat page
 function getaddClothing(req, res){
-	res.render('addClothing', {apiData: req.apiData});
-	console.log(req.result);
+	res.render('addClothing', {apiData: req.apiData}); //got ot the add clothing page when authenticated
+	console.log(req.result);//add the clothing from the external api on to the page
 }
 
-
+//export all contorllers to be used in the routes
 module.exports = {
 	getLogin: getLogin,
 	postLogin: postLogin ,
