@@ -62,7 +62,11 @@
             </div>
           </form>
         <div>
-         <%= productsArray %>
+          <ul>
+              <%for (var productArray in productArray){%>
+              <li><%=productArray%>:<%=productArray[productArray]%></li>    
+              <%}%>
+          </ul>
       </div>
     </div>
   </body>

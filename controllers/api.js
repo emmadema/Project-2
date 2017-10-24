@@ -36,7 +36,7 @@ function getSearch(req, res, next){
 				console.log(apiData);
 				console.log('__________________________________');	
 			}	
-			res.send(productArray);
+			res.render(productArray);
 		});
 	}
 
