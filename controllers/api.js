@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
-const key = require('../info');
+const key = require(API_KEY || '../info');
 const request = require('request');
 
 function getSearch(req, res, next){
