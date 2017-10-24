@@ -1,5 +1,10 @@
 # Project 2 - My Closet
-____
+
+My app is meant to solve the problem: What do I wear today? The app allows you to upload clothing form your closet and helps you select outfits to organize into a calandar.
+
+##Getting Started
+
+[Deploy on Heroku](https://thawing-caverns-98263.herokuapp.com)
 
 ## Solving a Problem:
 	* Problem: I spend a lot of time picking an outift each day and for special events. A major issue is knowing the weather when I am sleceting an outfit. Also know what is in my closet.
