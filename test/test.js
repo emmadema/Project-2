@@ -1,11 +1,11 @@
+//runs tests to make sure the ShopStyle API is functioning
 const expect = require("chai").expect;
 const request = require('request');
-//var URL = require('http://api.shopstyle.com/api/v2/categories?pid=uid6596-39966186-25');
 
 describe("Style", function(){
 	it("should recvie a 200 / OK HTTP Status Code", function(done){
 		request('http://api.shopstyle.com/api/v2/products?pid=uid6596-39966186-25', function(err, res, body){
-			expect(res.statusCode).to.eq(200);
+			expect(res.statusCode).to.eq(200); //expect a status 200 to be the response
 		done();
 		});
 	});
@@ -15,7 +15,7 @@ describe("Style", function(){
 			if(typeof(body) == "string"){
 				body = JSON.parse(body);
 			}
-			expect(body.metadata.category.name).to.not.be.empty;
+			expect(body.metadata.category.name).to.not.be.empty; //expect the name category on the api to not be emopty
 		done();
 		});
 	});
@@ -27,7 +27,7 @@ describe("Style", function(){
 					body = JSON.parse(body);
 				}
 			}
-			expect(body.products.name).to.not.be.empty;
+			expect(body.products.name).to.not.be.empty;//expect the products to also have a name
 			return done();
 		});
 	});

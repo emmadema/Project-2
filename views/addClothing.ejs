@@ -1,26 +1,29 @@
+<!--The Add Clothing Page allows uses to add clothing from their closet or from the Shopstyle API-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>My Closet</title>
-  <!--STYLESHEETS-->
+    <!--STYLESHEETS-->
     <link rel="stylesheet" href="styles/index.css">
     
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
     <!--VENDOR SCRIPTS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
+    <!--Personal Script-->
     <script src="/scripts/addClothing.js"></script>
 
   </head>
   <body>
-      <div class="jumbotron">
+      <div class="jumbotron"> 
         <div class="container">
           <h1>My Closet</h1>
           <p>Add clothing to your closet to get started</p>
@@ -61,14 +64,6 @@
               <input class="btn btn-primary button" id ="search" type="submit" text="Search">
             </div>
           </form>
-        <div>
-          <ul>
-              <%for (var productArray in productArray){%>
-              <li><%=productArray%>:<%=productArray[productArray]%></li>    
-              <%}%>
-          </ul>
-      </div>
     </div>
   </body>
 </html>	
-

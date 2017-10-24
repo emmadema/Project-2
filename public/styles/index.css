@@ -16,7 +16,7 @@
 	padding: 10px;
 }
 
-
+/*styles the header*/
 .header {
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
@@ -24,12 +24,14 @@
 	margin: 20px;
 }
 
+/*styles the app description*/
 .app{
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
 	text-align: center;
 }
 
+/*styles the buttons on the home screen*/
 .buttons{
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
@@ -37,14 +39,17 @@
 	border-radius: 5px;
 }
 
+/*styles the signup button*/
 #signUp{
 	padding: 5px 20px 5px 20px;
 }
 
+/*styles the log in button*/
 #logIn{
 	padding: 5px 30px 5px 30px;
 }
 
+/*styles the app descript on the bottom*/
 .appDescription {
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
