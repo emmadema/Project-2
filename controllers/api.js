@@ -16,9 +16,8 @@ const request = require('request');
 
 //send data to page when akeyword is searched
 
-function getSearch(req, res){
-	res.send('hiiii');
-	let keyword  = req.query.searc;
+function getSearch(req, res, next){
+	let keyword  = req.query.search;
 	console.log("getSearch ran");
 	console.log(keyword);
 	if (keyword) {
@@ -29,21 +28,19 @@ function getSearch(req, res){
 			req.searchResults = body;
 			body = JSON.parse(body);
 			//console.log(body.products);
+			var productArray = [];
 			for(i=0; i<body.products.length; i++) {			
-				var apiData = body.products[i].image.sizes.Medium;
+				let apiData = body.products[i].image.sizes.Medium;
+				productArray.push(apiData);
 				console.log('__________________________________');
 				console.log(apiData);
-				console.log('__________________________________');
-			res.send(apiData);
-			}
-			
-
-			//send data to a var inside req
-			//Json parse it
-			//movie requests
-			//google request lab
+				console.log('__________________________________');	
+			}	
+			res.send(productArray);
 		});
 	}
+
+	
 }
 
 
