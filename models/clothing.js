@@ -1,4 +1,4 @@
-//add to internal mongo datbase
+//aadds a clothing item to the internal mongo database
 var mongoose = require('mongoose');
 var	Schema = mongoose.Schema;
 

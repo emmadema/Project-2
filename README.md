@@ -49,7 +49,7 @@ Both tests are for the API to ensure is is getting the correct data. These use m
 [Java Script](https://www.javascript.com/)
 
 ## Versioning
-	* Version 1.3
+Version 1.3
 
 ## Authors
-	* Emma DeMango - [Git Hub](https://github.com/emmadema)
+Emma DeMango - [Git Hub](https://github.com/emmadema)

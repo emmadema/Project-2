@@ -1,29 +1,26 @@
- var passport = require("passport");
+var passport = require("passport"); //requires the use of passport
+const db = require('../models'); //sets the database to equal models
 
-const db = require('../models');
-
+/*****************
+Users Controllers
+*****************/
 
 // GET /signup
 //new user
 function getSignup(request, response) {
+	//render the signup page for the new user to signup
 	response.render('signup', {message : request.flash('signupMessage')});
 }
 
 // POST /signup
-//save user
-//create
+// new user
 function postSignup(request, response, next) {
-	//we already made local signup in passport.js
 	let signupStrategy = passport.authenticate('local-signup',{
 		successRedirect: '/addClothing',
 		failureRedirect: '/signup',
 		failureFlash: true
-
 	});
-
-	return signupStrategy(request,response, next);
-
-	
+	return signupStrategy(request,response, next);	
 }
 
 // GET /login
@@ -33,14 +30,12 @@ function getLogin(request, response) {
 }
 
 // POST /login 
-//is that user in here
 function postLogin(request, response, next) {
 	let loginStrategy = passport.authenticate('local-login',{
 		successRedirect: '/closetPage',
 		failureRedirect: '/login',
 		failureFlash: true
 	});
-
 	return loginStrategy(request, response, next);
 }
 
@@ -62,7 +57,6 @@ function getclosetPage(request, response){
 function getaddClothing(req, res){
 	res.render('addClothing', {apiData: req.apiData});
 	console.log(req.result);
-	//if req. query the got to api
 }
 
 
