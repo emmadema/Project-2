@@ -16,7 +16,8 @@ const db = require('../models'); //sets the database = to the models
 //gets only one clothing itme
 function getOne (req, res) {
   db.Clothing.findOne({_id: req.params.id }, function(err, clothing) {
-    res.json(clothing);
+    var body = JSON.parse(clohting);
+    res.send(body);
 	});
  }
 
