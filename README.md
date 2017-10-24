@@ -2,12 +2,12 @@
 
 My app is meant to solve the problem: What do I wear today? The app allows you to upload clothing form your closet and helps you select outfits to organize into a calandar.
 
-##Getting Started
+## Getting Started
 
 [Deploy on Heroku](https://thawing-caverns-98263.herokuapp.com)
 
 ## Solving a Problem:
-	* Problem: I spend a lot of time picking an outift each day and for special events. A major issue is knowing the weather when I am sleceting an outfit. Also know what is in my closet.
+	*Problem: I spend a lot of time picking an outift each day and for special events. A major issue is knowing the weather when I am sleceting an outfit. Also know what is in my closet.
 
 	* Goal: I would like to make an app that can intergrate with shopify and weather.com
 		* The app will list out the day of the week and the weather of the day (ideally you can sleste special event days from a calandar and it will pull up the weather for those days)
