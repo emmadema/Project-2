@@ -1,4 +1,4 @@
-var passport = require("passport");
+ var passport = require("passport");
 
 const db = require('../models');
 
