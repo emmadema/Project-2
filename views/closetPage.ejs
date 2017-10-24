@@ -2,36 +2,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <title>My Closet</title>
+    <title>My Closet</title>
 
-  <!--STYLESHEETS-->
-  <link rel="stylesheet" href="styles/index.css">
-  
-  <!--Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 
-  <!--VENDOR SCRIPTS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-
-  <script type="text/javascript" src="/scripts/closetPage.js" ></script>
-  <a href="/addClothing" class="btn btn-primary" id ="gotToAdd" type="submit">Add clothing</a>
-</head>
-<body>
-  <div class ="vertical-center">
-    <div class="container vertical-center d-felx">
-      <h2>Welcome to your personal closet</h2>
+    <!--VENDOR SCRIPTS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="/scripts/closetPage.js" ></script>
+  </head>
+  <body>
+     <a href="/addClothing" class="btn btn-primary" id ="gotToAdd" type="submit">Add clothing</a> 
+    <div class ="vertical-center">
+      <div class="container vertical-center d-felx">
+        <h2>Welcome to your personal closet</h2>
+      </div>
+      <ul class="list">
+        <% clothing.forEach(function(res){ %>
+          <li><%= res.typeOf %></li>
+        <% }); %>
+      </ul>
     </div>
-    <ul class="list">
-      <% clothing.forEach(function(res){ %>
-        <li><%= res.typeOf %></li>
 
-      <% }); %>
-    </ul>
-  </div>
-</body>
+  </body>
+
 </html>
