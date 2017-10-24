@@ -16,26 +16,33 @@ const request = require('request');
 
 //send data to page when akeyword is searched
 
-function getSearch(req, res, next){
+function getSearch(req, res){
+	res.send('hiiii');
 	let keyword  = req.query.searc;
 	console.log("getSearch ran");
 	console.log(keyword);
-		if (keyword) {
-			let apiUrl = 'http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key;
-			console.log(apiUrl);
-			request (apiUrl, function(err, response, body) {//check this
-				//res.send(data);
-				req.searchResults = body;
-				req.apiData = JSON.parse(body).products[0].name;
-				console.log(req.apiData);
-				next();
-				//send data to a var inside req
-				//Json parse it
-				//movie requests
-				//google request lab
-			});
-		} else {
-		next();
+	if (keyword) {
+		let apiUrl = 'http://api.shopstyle.com/api/v2/products?fts=' + keyword + '&pid=' + key + '&offset=0&limit=10';
+		//console.log(apiUrl);
+		request (apiUrl, function(err, response, body) {//check this
+			//res.send(data);
+			req.searchResults = body;
+			body = JSON.parse(body);
+			//console.log(body.products);
+			for(i=0; i<body.products.length; i++) {			
+				var apiData = body.products[i].image.sizes.Medium;
+				console.log('__________________________________');
+				console.log(apiData);
+				console.log('__________________________________');
+			res.send(apiData);
+			}
+			
+
+			//send data to a var inside req
+			//Json parse it
+			//movie requests
+			//google request lab
+		});
 	}
 }
 
