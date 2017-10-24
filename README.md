@@ -2,9 +2,25 @@
 
 My app is meant to solve the problem: What do I wear today? The app allows you to upload clothing form your closet and helps you select outfits to organize into a calandar.
 
-## Getting Started
+## Running the Tests
+Both tests are for the API to ensure is is getting the correct data. These use mocha and chai to run.
+ [Tests](../test/test.js)
+
+## Deployment
 
 [Deploy on Heroku](https://thawing-caverns-98263.herokuapp.com)
+
+## Built With
+	* [NODE JS](https://nodejs.org/en/)
+	* [J Query](https://jquery.com/)
+	* [Java Script](https://www.javascript.com/)
+
+## Versioning
+	* Version 1.3
+
+## Authors
+	* Emma DeMango - [Git Hub](https://github.com/emmadema)
+
 
 ## Solving a Problem:
 	*Problem: I spend a lot of time picking an outift each day and for special events. A major issue is knowing the weather when I am sleceting an outfit. Also know what is in my closet.
@@ -35,25 +51,3 @@ My app is meant to solve the problem: What do I wear today? The app allows you t
 	* Who would need this? 
 		* People who want to plan their outfits
 		* young prefessional women who love fashion and time saving
-
-
-
-
-Random Ideas:
-	* How to Organize Clothes
-		* color
-		* season
-		* style
-		* type
-		* brand
-
-	* How to search for clothes
-		* brand
-
-	* Fashion Calader
-		* add each outfit based on the day - have a large clanandar grid that shows if you have an outfit selected for that day or if you still need one
-		* when you click on the calandar it shows you what the weather is that day and what you have on each day 
-
-	* My Closet
-		* add in each item in you closet by manually entering the data and pictures
-		* add in each item using a serach through shopify using shopify Product API
