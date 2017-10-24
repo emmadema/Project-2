@@ -28,14 +28,14 @@ function getSearch(req, res, next){
 			//creates an emoy array to add the products
 			for(i=0; i<body.products.length; i++) {		
 			//runs through a for loop to add all products into the empy array	
-				let apiData = body.products[i].image.sizes.Medium;
+				let apiData = body.products[i].image.sizes.Medium.url;
 				//creates a var called api data to pull only the images out of the API
 				productArray.push(apiData);//pushes the api data into the product array each time the for loop runs
 				console.log('__________________________________');
 				console.log(apiData);
 				console.log('__________________________________');	
 			}	
-			res.send(productArray); //sends the product array to the front end
+			res.json(productArray); //sends the product array to the front end
 		});
 	}
 

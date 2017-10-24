@@ -11,6 +11,7 @@ $(document).ready(function (){//makes sure the page is ready for Jquery
 		   	data: {search: $('#searchBar').val()}, //sets the data to the value enetered in the search bar
 		    contentType: "application/json", //json application
 		    success: function(res){ //if successful console log the response
+		    	$('.data').append(res);
 		    	console.log(res);
 		    }, failure: function(res){ //if not cosole log fail
 		    	console.log("FAIL");
