@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
-const key = require(process.env.API_KEY || '../info');
+const key = process.env.API_KEY || require('../info');
 const request = require('request');
 const mongoose = require('mongoose');
 const db = require('../models'); //sets the database = to the models
