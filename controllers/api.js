@@ -1,7 +1,6 @@
 /********************
 *Contorllers for API*
 ********************/
-
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
@@ -10,6 +9,8 @@ const usersController = require('../controllers/users');
 const staticsController = require('../controllers/statics');
 const key = process.env.API_KEY || require('../info');
 const request = require('request');
+
+var word = "word";
 
 function getSearch(req, res, next){
 	let keyword  = req.query.search; //the key work is the search query params
@@ -28,11 +29,11 @@ function getSearch(req, res, next){
 			//creates an emoy array to add the products
 			for(i=0; i<body.products.length; i++) {		
 			//runs through a for loop to add all products into the empy array	
-				let apiData = body.products[i].image.sizes.Medium.url;
+				let apiData = body.products[i].name;
 				//creates a var called api data to pull only the images out of the API
 				productArray.push(apiData);//pushes the api data into the product array each time the for loop runs
 				console.log('__________________________________');
-				console.log(apiData);
+				console.log(productArray);
 				console.log('__________________________________');	
 			}	
 			res.json(productArray); //sends the product array to the front end
