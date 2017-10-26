@@ -33,12 +33,15 @@ router.route('/logout') //redirects to logout form
   .get(usersController.getLogout);
 
 router.route('/addClothing') //loads data from add clothing page
-  .get(authenticatedUser,  usersController.getaddClothing, formController.getOne)
-  .post(formController.createOne)
-  .delete(formController.deleteOne);
+  .get(authenticatedUser, usersController.getaddClothing)
+  .post(formController.createOne) //posts the new created clothing from the form
+  .delete(formController.deleteOne); //deletes one of the itmes of clothing
 
 router.route('/getSearch') //loads data from get search page
   .get(apiController.getSearch);
+
+router.route('/getaddClothing')
+  .get(formController.getOne);//gets one item of clothing
 
 
 router.route('/closetPage') //loads data from the closet page

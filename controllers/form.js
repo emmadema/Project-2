@@ -22,6 +22,7 @@ function getOne (req, res) {
  }
 
 //creates a clothing item
+//this one works with the form
 function createOne (req, res) {
     //sets new item equal to the new database clothing
   	var newItem = new db.Clothing({
@@ -47,10 +48,9 @@ function deleteOne (req, res) {
   });
 }
 
-//updates a clothing item
-//function updateOne (req, res){
+function updateOne (req, res){
 
-//}
+}
 
 //export all controllers to be used in the routes
 module.exports = {
