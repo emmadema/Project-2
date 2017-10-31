@@ -42,11 +42,13 @@
 /*styles the signup button*/
 #signUp{
 	padding: 5px 20px 5px 20px;
+	margin: 30px 0 0 20px;
 }
 
 /*styles the log in button*/
 #logIn{
 	padding: 5px 30px 5px 30px;
+	margin: 30px 20px 0 0;
 }
 
 /*styles the app descript on the bottom*/
@@ -54,7 +56,12 @@
 	font-family: 'Didact Gothic', sans-serif;
 	color: #838085;
 	text-align: center;
-	margin: 50px 20px 20px 20px;
+	margin: 30px 20px 20px 20px;
+}
+
+.icon{
+	margin: 0 auto;
+	text-align: center;
 }
 
 /*allows the animation to function*/
